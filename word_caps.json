@@ -1,0 +1,123 @@
+{
+    "description": "WORD_CAPS - When caps_lock is on change hyphen - to underscore _. End when space, enter, tab, or escape is pressed, disabling caps_lock",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "hyphen",
+                "modifiers": {
+                    "mandatory": [
+                        "caps_lock"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                        "shift"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "mandatory": [
+                        "caps_lock"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "spacebar"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "tab",
+                "modifiers": {
+                    "mandatory": [
+                        "caps_lock"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "tab"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "return_or_enter",
+                "modifiers": {
+                    "mandatory": [
+                        "caps_lock"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "return_or_enter"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "escape",
+                "modifiers": {
+                    "mandatory": [
+                        "caps_lock"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "escape"
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "key_code": "caps_lock"
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
